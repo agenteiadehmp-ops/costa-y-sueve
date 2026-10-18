@@ -13,3 +13,8 @@
 
 .original-logo{display:block;filter:none;mix-blend-mode:normal;object-fit:contain}
 
+
+/* Catálogo y servicios por necesidad */
+.owners{grid-template-columns:repeat(3,1fr);gap:34px}.owner{min-width:0}.owner h3{font-size:29px}.service-grid{grid-template-columns:repeat(3,1fr)}.property-list{display:grid;gap:0;margin:28px 0 12px;border-top:1px solid var(--line)}.property-list article{display:grid;gap:5px;padding:13px 0;border-bottom:1px solid var(--line)}.property-list strong{font-size:16px;font-weight:600}.property-list span{font-size:12px;color:var(--muted);line-height:1.4}.stays h2{margin-bottom:18px}
+@media(max-width:1100px){.owners{grid-template-columns:1fr 1fr}.owner:last-child{grid-column:1/-1}.service-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.owners{grid-template-columns:1fr;gap:0}.owner:last-child{grid-column:auto}.service-grid{grid-template-columns:none}.property-list{margin-top:24px}}
