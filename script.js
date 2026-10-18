@@ -1,0 +1,20 @@
+
+const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/34649345032?text='+encodeURIComponent(a.dataset.wa);a.target='_blank';a.rel='noopener noreferrer'});document.getElementById('year').textContent=new Date().getFullYear();const arrival=document.getElementById('arrival'),departure=document.getElementById('departure');const today=new Date();const isoLocal=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');arrival.min=isoLocal(today);departure.min=isoLocal(today);arrival.addEventListener('change',()=>{if(!arrival.value)return;const next=new Date(arrival.value+'T12:00:00');next.setDate(next.getDate()+1);departure.min=isoLocal(next);if(departure.value&&departure.value<=arrival.value)departure.value=''});const formatDate=v=>new Date(v+'T12:00:00').toLocaleDateString('es-ES');document.getElementById('stay-form').addEventListener('submit',function(e){e.preventDefault();if(departure.value<=arrival.value){departure.setCustomValidity('La salida debe ser posterior a la llegada.');departure.reportValidity();return}departure.setCustomValidity('');const d=new FormData(this);const message=`Hola Hernán, buscamos alojamiento del ${formatDate(d.get('arrival'))} al ${formatDate(d.get('departure'))} para ${d.get('guests')} personas. Zona: ${d.get('zone')}. ¿Qué tenéis disponible?`;window.open('https://wa.me/34649345032?text='+encodeURIComponent(message),'_blank','noopener,noreferrer')});departure.addEventListener('input',()=>departure.setCustomValidity(''));
+
+const cinema=document.querySelector('.cinema'), sceneA=document.querySelector('.scene-one'),sceneB=document.querySelector('.scene-two'),sceneC=document.querySelector('.scene-three'),photos=document.querySelectorAll('.landscape img'),copies=[...document.querySelectorAll('.scene-copy')], dots=[...document.querySelectorAll('.scene-count i')], place=document.querySelector('.scene-place');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const ease=(a,b,v)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t)};
+let target=0,position=0,mx=0,my=0,tx=0,ty=0,pending=false;
+function tick(){pending=false;const distance=cinema.offsetHeight-innerHeight;target=distance>0?clamp(-cinema.getBoundingClientRect().top/distance):0;
+if(reduced.matches){position=target;mx=my=0;copies.forEach((el,i)=>{el.inert=i!==0});return;}
+position+=(target-position)*.12;mx+=(tx-mx)*.1;my+=(ty-my)*.1;
+const t=position,second=ease(.29,.52,t),third=ease(.64,.87,t),out=ease(.04,.28,t);
+const opacity=[1-out,second*(1-ease(.56,.74,t)),third];
+sceneA.style.opacity=1;sceneB.style.opacity=second;sceneC.style.opacity=third;
+photos.forEach((img,i)=>{img.style.transform=`translate3d(${mx*(i?8:14)}px,${my*9}px,0) scale(${1.05+t*(i?.12:.2)})`});
+copies.forEach((el,i)=>{el.style.opacity=opacity[i];el.style.transform=`translateY(${i===0?-out*95:(1-opacity[i])*55}px)`;el.style.pointerEvents=opacity[i]>.7?'auto':'none';el.inert=opacity[i]<.7;});
+const active=t<.36?0:t<.73?1:2;dots.forEach((d,i)=>d.classList.toggle('active',i===active));place.textContent=active===0?'01 / Junto al mar':active===1?'02 / Tu casa, cuidada':'03 / Lista para llegar';
+if(Math.abs(target-position)>.0001||Math.abs(tx-mx)>.001||Math.abs(ty-my)>.001)requestTick();}
+function requestTick(){if(!pending){pending=true;requestAnimationFrame(tick)}}
+addEventListener('scroll',requestTick,{passive:true});addEventListener('resize',requestTick);addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5;requestTick()}},{passive:true});reduced.addEventListener('change',requestTick);requestTick();
