@@ -1,15 +1,25 @@
 # Costa y Sueve
 
-Web estática con HTML, CSS y JavaScript.
+Sitio estático multipágina: HTML, CSS y JavaScript, sin instalación ni compilación.
 
-## Subir a GitHub
-Descomprime este ZIP y sube su contenido a la raíz del repositorio. index.html debe quedar en la raíz, no dentro de otra carpeta.
+## Páginas
+- `index.html`: portada con tres escenas fotográficas animadas al desplazarse.
+- `alojamientos.html`: catálogo con filtros de destino y capacidad.
+- Cinco fichas de alojamiento con galería ampliable y consultas por WhatsApp.
+- `propietarios.html`, `gestion-integral.html`, `servicios.html` y `segundas-residencias.html`: recorridos independientes para propietarios.
+- `contacto.html`, `privacidad.html` y `404.html`.
 
-## Desplegar en Vercel
-1. Añade un proyecto e importa el repositorio.
-2. Framework Preset: Other.
-3. Root Directory: raíz del repositorio.
-4. No requiere instalación ni comando de compilación.
-5. Pulsa Deploy.
+## Publicación
+Los archivos están en la raíz del repositorio. Vercel: Framework Other, sin build ni instalación, salida `.`. La configuración está en `vercel.json`.
 
-El dominio costaysueve.com se configura por separado. El formulario prepara una consulta en WhatsApp; no confirma reservas.
+## Fotografías
+14 fotografías propias facilitadas por Hernán, optimizadas en WebP y servidas desde el mismo sitio. El logotipo se conserva con transparencia.
+
+## Alojamientos de muestra
+Los cinco alojamientos son ejemplos solicitados para diseñar el catálogo. Se identifican como tales, no tienen precios, reseñas ni disponibilidad inventados y no se pueden reservar desde la web. Sustituir nombres, capacidades, equipamiento y fotografías asignadas por la información verificada de cada vivienda antes de comercializarlos.
+
+## Consultas
+Los formularios validan fechas y preparan un mensaje en WhatsApp. No envían mensajes automáticamente ni confirman reservas. No hay pasarela de pago ni motor de disponibilidad conectado.
+
+## Verificación
+Se comprobaron las rutas y archivos locales, la lectura de las 14 fotografías y los flujos de menú, filtros, galería, fechas, consultas y escenas con movimiento reducido.
