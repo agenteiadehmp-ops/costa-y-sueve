@@ -12,3 +12,4 @@
 .scene-three{opacity:0}.scene-one img{object-position:50% 52%}.scene-two img{object-position:50% 48%}.scene-three img{object-position:50% 56%}.cinema-shade{background:linear-gradient(180deg,#101a27a8 0%,#15202755 25%,#15202777 65%,#182025c9 100%)}@media(max-width:700px){.scene-one img{object-position:50% 50%}.scene-two img{object-position:50% 45%}.scene-three img{object-position:50% 50%}}@media(prefers-reduced-motion:reduce){.scene-three{display:none}}
 
 .original-logo{display:block;filter:none;mix-blend-mode:normal;object-fit:contain}
+
