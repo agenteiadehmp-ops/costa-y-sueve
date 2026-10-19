@@ -223,60 +223,57 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
   $$('[data-reveal]').forEach(element => observer.observe(element));
 }
 
-// Three photographic chapters, eased scroll and subtle pointer depth.
+// Seven chapters share the same scroll timing; each retains its own photograph and destination.
 const cinema = $('.cinema');
 if (cinema) {
-  const scenes = $$('.scene', cinema);
-  const copies = $$('.scene-copy', cinema);
-  const photos = $$('.scene img', cinema);
-  const dots = $$('[data-scene]', cinema);
-  const caption = $('[data-scene-caption]', cinema);
-  const smoothstep = (start, end, value) => { const t = clamp((value - start) / (end - start)); return t * t * (3 - 2 * t); };
-  let progress = 0, pointerX = 0, pointerY = 0, targetX = 0, targetY = 0, rafPending = false, initialized = false;
+  const scenes = $$('.scene', cinema), copies = $$('.scene-copy', cinema);
+  const photos = $$('.scene img', cinema), dots = $$('[data-scene]', cinema);
+  const caption = $('[data-scene-caption]', cinema), stage = $('.stage', cinema);
+  const smoothstep = (a,b,v) => { const t = clamp((v-a)/(b-a)); return t*t*(3-2*t); };
+  let progress = 0, pointerX = 0, pointerY = 0, targetX = 0, targetY = 0;
+  let rafPending = false, initialized = false;
   function updateCinema() {
     rafPending = false;
-    if (reducedMotion.matches) {
-      scenes.forEach((scene, index) => { scene.style.opacity = index === 0 ? 1 : 0; });
-      photos.forEach(photo => { photo.style.transform = 'none'; });
-      copies.forEach((copy, index) => {
-        copy.inert = index !== 0; copy.style.opacity = index === 0 ? 1 : 0; copy.style.transform = 'none'; copy.style.pointerEvents = index === 0 ? 'auto' : 'none';
-      });
-      return;
-    }
-    const distance = Math.max(1, cinema.offsetHeight - $('.stage', cinema).offsetHeight);
-    const target = clamp(-cinema.getBoundingClientRect().top / distance);
-    if (!initialized) { progress = target; initialized = true; }
-    progress += (target - progress) * 0.13;
-    pointerX += (targetX - pointerX) * 0.1;
-    pointerY += (targetY - pointerY) * 0.1;
-    const second = smoothstep(0.22, 0.47, progress), third = smoothstep(0.61, 0.86, progress);
-    const firstExit = smoothstep(0.08, 0.28, progress);
-    const opacity = [1 - firstExit, second * (1 - smoothstep(0.52, 0.72, progress)), third];
-    scenes[0].style.opacity = '1'; scenes[1].style.opacity = second; scenes[2].style.opacity = third;
-    photos.forEach((photo,index) => { photo.style.transform = 'translate3d(' + (pointerX * (index ? 10 : 17)) + 'px,' + (pointerY * 9) + 'px,0) scale(' + (1.05 + progress * (index ? 0.09 : 0.16)) + ')'; });
-    copies.forEach((copy,index) => {
-      copy.style.opacity = opacity[index];
-      copy.style.transform = 'translateY(' + (index === 0 ? -firstExit * 80 : (1 - opacity[index]) * 45) + 'px)';
-      copy.inert = opacity[index] < 0.65;
-      copy.style.pointerEvents = opacity[index] >= 0.65 ? 'auto' : 'none';
+    const distance = Math.max(1, cinema.offsetHeight - stage.offsetHeight);
+    const target = reducedMotion.matches ? 0 : clamp(-cinema.getBoundingClientRect().top / distance);
+    if (!initialized || reducedMotion.matches) { progress = target; initialized = true; }
+    progress += (target-progress)*0.13;
+    pointerX += (targetX-pointerX)*0.1; pointerY += (targetY-pointerY)*0.1;
+    const phase = progress*(scenes.length-1);
+    const active = Math.min(scenes.length-1, Math.round(phase));
+    scenes.forEach((scene,index) => {
+      // A readable pause around each chapter, followed by a short crossfade.
+      const enter = index === 0 ? 1 : smoothstep(index-0.7,index-0.3,phase);
+      const exit = index === scenes.length-1 ? 0 : smoothstep(index+0.3,index+0.7,phase);
+      const visibility = enter*(1-exit);
+      scene.style.opacity = visibility;
+      const textEnter = index === 0 ? 1 : smoothstep(index-0.48,index-0.25,phase);
+      const textExit = index === scenes.length-1 ? 0 : smoothstep(index+0.25,index+0.48,phase);
+      const textOpacity = textEnter*(1-textExit);
+      const copy = copies[index];
+      copy.style.opacity = textOpacity;
+      copy.style.transform = reducedMotion.matches ? 'none' : 'translateY(' + ((1-textEnter)*24-textExit*24) + 'px)';
+      copy.inert = textOpacity < 0.65;
+      copy.style.pointerEvents = textOpacity >= 0.65 ? 'auto' : 'none';
+      // Desktop retains the complete image. Only mobile gets a very small overscan.
+      photos[index].style.transform = reducedMotion.matches || innerWidth >= 1000 ? 'none' : 'translate3d('+(pointerX*8)+'px,'+(pointerY*6)+'px,0) scale(1.03)';
     });
-    const active = progress < 0.32 ? 0 : progress < 0.72 ? 1 : 2;
-    dots.forEach((dot,index) => dot.setAttribute('aria-pressed', String(active === index)));
-    caption.textContent = ['01 / Junto al mar','02 / Tu casa, cuidada','03 / Lista para llegar'][active];
-    if (Math.abs(target - progress) > 0.0001 || Math.abs(targetX - pointerX) > 0.001 || Math.abs(targetY - pointerY) > 0.001) requestTick();
+    dots.forEach((dot,index) => dot.setAttribute('aria-pressed',String(active===index)));
+    caption.textContent = String(active+1).padStart(2,'0')+' / '+dots[active].dataset.caption;
+    if (!reducedMotion.matches && (Math.abs(target-progress)>0.0001 || Math.abs(targetX-pointerX)>0.001 || Math.abs(targetY-pointerY)>0.001)) requestTick();
   }
-  function requestTick() { if (!rafPending) { rafPending = true; requestAnimationFrame(updateCinema); } }
-  window.addEventListener('scroll', requestTick, {passive:true});
-  window.addEventListener('resize', requestTick);
-  window.addEventListener('pointermove', event => {
+  function requestTick() { if (!rafPending) { rafPending=true; requestAnimationFrame(updateCinema); } }
+  window.addEventListener('scroll',requestTick,{passive:true});
+  window.addEventListener('resize',requestTick);
+  window.addEventListener('pointermove',event => {
     if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
-    targetX = event.clientX / innerWidth - 0.5; targetY = event.clientY / innerHeight - 0.5; requestTick();
-  }, {passive:true});
-  dots.forEach((dot,index) => dot.addEventListener('click', () => {
-    const start = cinema.getBoundingClientRect().top + scrollY;
-    const distance = Math.max(1, cinema.offsetHeight - $('.stage', cinema).offsetHeight);
-    window.scrollTo({top:start + distance * [0,0.5,0.97][index], behavior:reducedMotion.matches ? 'auto' : 'smooth'});
+    targetX=event.clientX/innerWidth-0.5; targetY=event.clientY/innerHeight-0.5; requestTick();
+  },{passive:true});
+  dots.forEach((dot,index) => dot.addEventListener('click',() => {
+    const start=cinema.getBoundingClientRect().top+scrollY;
+    const distance=Math.max(1,cinema.offsetHeight-stage.offsetHeight);
+    window.scrollTo({top:start+distance*index/(scenes.length-1),behavior:reducedMotion.matches?'auto':'smooth'});
   }));
-  reducedMotion.addEventListener('change', requestTick);
+  reducedMotion.addEventListener('change',requestTick);
   requestTick();
 }
