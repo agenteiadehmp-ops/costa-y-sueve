@@ -24,6 +24,7 @@ label{display:grid;gap:10px;font-size:12px;font-weight:600;line-height:1.35;min-
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.cinema{height:auto}.stage{position:relative}.scene:not(.scene-1),.scene-copy:not(.copy-1),.scene-dots{display:none}.scene-1{opacity:1!important}.scene img{transform:none!important}.copy-1{opacity:1!important;transform:none!important}.scene-bottom{bottom:24px}}
 
 /* Portrait originals keep their complete composition on wide screens. */
+.local-intro .local-landscape{display:block;width:100%;height:auto;max-height:480px;object-fit:contain;margin:0 auto 38px}
 .shared-services{display:flex;align-items:center;justify-content:space-between;gap:50px;border-bottom:1px solid var(--line)}
 .shared-services>div{max-width:720px}.shared-services p{max-width:620px;margin:25px 0 0}.shared-services>.button{flex-shrink:0}
 .scene-copy:not(.copy-1) h2{font-size:clamp(52px,6vw,95px)}
