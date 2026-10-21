@@ -103,7 +103,7 @@ if (catalogForm) {
       card.hidden = !visible;
       if (visible) count++;
     });
-    $('#result-count').textContent = count + (count === 1 ? ' alojamiento de ejemplo' : ' alojamientos de ejemplo');
+    $('#result-count').textContent = count + (count === 1 ? ' alojamiento' : ' alojamientos');
     $('#empty-results').hidden = count !== 0;
     if (helpCard) helpCard.hidden = count === 0;
     $$('[data-zone-filter]').forEach(tab => tab.setAttribute('aria-pressed', String(tab.dataset.zoneFilter === zone)));
