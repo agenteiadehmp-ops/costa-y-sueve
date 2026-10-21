@@ -119,7 +119,7 @@ if (catalogForm) {
     const departure = fields.get('salida');
     $('#date-help').textContent = arrival && departure
       ? 'Tu consulta: del ' + formatDate(arrival) + ' al ' + formatDate(departure) + '. La disponibilidad se confirma con Hernán.'
-      : 'Los filtros muestran zona y capacidad. La disponibilidad para tus fechas se consulta con Hernán.';
+      : 'Elige el alojamiento que encaje contigo y consulta tus fechas.';
   }
   catalogForm.addEventListener('submit', event => { event.preventDefault(); if (validDates(catalogForm)) updateCatalog(); });
   $$('[data-zone-filter]').forEach(tab => tab.addEventListener('click', () => {
