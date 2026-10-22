@@ -29,7 +29,8 @@
     if (!(arrival && departure)) { action.href = '#'; action.setAttribute('aria-disabled','true'); return; }
     const house = houseSelect ? houseSelect.value : (calendar.dataset.house || 'COL1');
     const count = guests ? guests.value : '2';
-    const message = `Hola Hernán, me interesaría ${house}. Entrada: ${key(arrival)}. Salida: ${key(departure)}. ${count} huésped${count==='1'?'':'es'}. ¿Puedes confirmar disponibilidad y precio?`;
+    const group = calendar.dataset.askGuests === 'true' ? 'Quisiera consultar si encaja con nuestro grupo.' : `${count} huésped${count==='1'?'':'es'}.`;
+    const message = `Hola Hernán, me interesaría ${house}. Entrada: ${key(arrival)}. Salida: ${key(departure)}. ${group} ¿Puedes confirmar disponibilidad y precio?`;
     action.href = 'https://wa.me/34649345032?text='+encodeURIComponent(message);
     action.removeAttribute('aria-disabled');
   }
@@ -63,5 +64,6 @@
   calendar.querySelector('[data-calendar-next]').addEventListener('click',()=>{shown=new Date(shown.getFullYear(),shown.getMonth()+1,1);render();});
   if(action) action.addEventListener('click',event=>{if(action.getAttribute('aria-disabled')==='true')event.preventDefault();});
   if(houseSelect) houseSelect.addEventListener('change',()=>{arrival=null;departure=null;updateSummary();render();});
+  if(guests) guests.addEventListener('change',updateSummary);
   updateSummary();render();
 })();
