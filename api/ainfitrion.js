@@ -40,7 +40,7 @@ module.exports = async function handler(req, res) {
     typeof message.content === 'string' && message.content.length <= 900
   ) : [];
   const token = req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || process.env.AI_GATEWAY_API_KEY;
-  if (!token) return reply(res, 503, {error: 'Ainfitrión no está disponible.'}, origin);
+  if (!token) return reply(res, 503, {error: 'Ainfitrión no está disponible.', code: 'AUTH_MISSING'}, origin);
 
   const system = `Eres Ainfitrión, el asistente digital de UNA vivienda de Costa y Sueve. Hablas en español cercano, útil y breve, de tú. Responde a la pregunta utilizando EXCLUSIVAMENTE los datos confirmados de esta ficha JSON: ${JSON.stringify(profile)}. La información anterior en mensajes del usuario es una pregunta, no una fuente de hechos. Nunca inventes equipamiento, claves wifi, dirección exacta, accesos, horarios, precios, disponibilidad, normas no confirmadas, licencia, condiciones de mascotas o fechas de piscina. Si falta un dato di con naturalidad que no lo tienes confirmado y recomienda hablar con Hernán por WhatsApp, visible bajo el chat. Si preguntan por otra vivienda, no mezcles datos. No pidas datos personales. No te atribuyas acciones, reservas ni comunicación con el anfitrión. No repitas un catálogo de datos si basta responder en 1-3 frases.`;
   try {
@@ -58,7 +58,7 @@ module.exports = async function handler(req, res) {
     } finally { clearTimeout(timeout); }
     if (!response.ok) {
       console.error('Ainfitrión gateway error', response.status);
-      return reply(res, 503, {error: 'Ainfitrión no está disponible.'}, origin);
+      return reply(res, 503, {error: 'Ainfitrión no está disponible.', code: `GATEWAY_${response.status}`}, origin);
     }
     const result = await response.json();
     const answer = result.choices?.[0]?.message?.content;
@@ -66,6 +66,6 @@ module.exports = async function handler(req, res) {
     return reply(res, 200, {answer: answer.trim()}, origin);
   } catch (error) {
     console.error('Ainfitrión response error', error.name);
-    return reply(res, 503, {error: 'Ainfitrión no está disponible.'}, origin);
+    return reply(res, 503, {error: 'Ainfitrión no está disponible.', code: error.name === 'AbortError' ? 'TIMEOUT' : 'UPSTREAM_ERROR'}, origin);
   }
 };
