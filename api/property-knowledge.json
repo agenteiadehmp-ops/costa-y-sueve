@@ -1,0 +1,80 @@
+{
+  "col3": {
+    "name": "Apartamento amplio en Colunga",
+    "zone": "Colunga",
+    "capacity": null,
+    "specs": [
+      "Cama doble y camas individuales",
+      "Cocina independiente"
+    ],
+    "description": "Dormitorios separados, cocina independiente y dos baños para disfrutar juntos con más espacio.",
+    "surroundings": [
+      "Un paseo por Colunga, un día de playa en La Griega o una visita a Lastres. Combina el mar con el Museo del Jurásico y los paisajes del Sueve.",
+      "En Colunga encontrarás bares, restaurantes y supermercados para el día a día. Pregúntale a Hernán por ideas para tu estancia."
+    ],
+    "rules": [
+      "Cuida la vivienda y respeta el descanso de los vecinos, especialmente por la noche.",
+      "Confirma con Hernán los horarios de entrada y salida y el número de personas de la estancia.",
+      "Si viajas con mascotas o necesitas saber las condiciones sobre tabaco y visitas, consúltalo antes de reservar.",
+      "Si algo no funciona o necesitas ayuda durante la estancia, habla directamente con tu anfitrión."
+    ],
+    "kitchen_answer": "Tienes vitrocerámica, horno, microondas, frigorífico, ollas, sartenes y utensilios para cocinar.",
+    "confirmed_extra": [
+      "Tendedero plegable detrás del frigorífico.",
+      "Tabla de planchar detrás de la puerta del baño con bañera.",
+      "Un baño con ducha y otro con bañera.",
+      "La existencia de una plancha eléctrica no está confirmada."
+    ]
+  },
+  "col2": {
+    "name": "Apartamento para cuatro en Colunga",
+    "zone": "Colunga",
+    "capacity": 4,
+    "specs": [
+      "4 huéspedes",
+      "1 dormitorio + sofá cama",
+      "1 baño"
+    ],
+    "description": "Dormitorio de cama doble y sofá cama: un espacio cómodo para compartir entre cuatro.",
+    "surroundings": [
+      "Un paseo por Colunga, un día de playa en La Griega o una visita a Lastres. Combina el mar con el Museo del Jurásico y los paisajes del Sueve.",
+      "En Colunga encontrarás bares, restaurantes y supermercados para el día a día. Pregúntale a Hernán por ideas para tu estancia."
+    ],
+    "rules": [
+      "Cuida la vivienda y respeta el descanso de los vecinos, especialmente por la noche.",
+      "Confirma con Hernán los horarios de entrada y salida y el número de personas de la estancia.",
+      "Si viajas con mascotas o necesitas saber las condiciones sobre tabaco y visitas, consúltalo antes de reservar.",
+      "Si algo no funciona o necesitas ayuda durante la estancia, habla directamente con tu anfitrión."
+    ],
+    "kitchen_answer": "Tienes vitrocerámica, horno, frigorífico, microondas, cafetera de filtro y lavadora.",
+    "confirmed_extra": [
+      "Un dormitorio de cama doble y sofá cama."
+    ]
+  },
+  "col1": {
+    "name": "Apartamento para tres en Colunga",
+    "zone": "Colunga",
+    "capacity": 3,
+    "specs": [
+      "3 huéspedes",
+      "1 dormitorio + cama en salón",
+      "1 baño"
+    ],
+    "description": "Una escapada para tres, con piscina de temporada y el Sueve como telón de fondo.",
+    "surroundings": [
+      "Un paseo por Colunga, un día de playa en La Griega o una visita a Lastres. Combina el mar con el Museo del Jurásico y los paisajes del Sueve.",
+      "En Colunga encontrarás bares, restaurantes y supermercados para el día a día. Pregúntale a Hernán por ideas para tu estancia."
+    ],
+    "rules": [
+      "Cuida la vivienda y respeta el descanso de los vecinos, especialmente por la noche.",
+      "Confirma con Hernán los horarios de entrada y salida y el número de personas de la estancia.",
+      "Si viajas con mascotas o necesitas saber las condiciones sobre tabaco y visitas, consúltalo antes de reservar.",
+      "Si algo no funciona o necesitas ayuda durante la estancia, habla directamente con tu anfitrión."
+    ],
+    "kitchen_answer": "En las fotos de la vivienda puedes explorar la cocina y su distribución. Si necesitas un utensilio concreto, pregúntale a Hernán antes de llegar.",
+    "confirmed_extra": [
+      "Piscina de temporada en verano; fechas de apertura variables, consultar antes.",
+      "Cancha de tenis y aparcamiento gratuito."
+    ]
+  }
+}
