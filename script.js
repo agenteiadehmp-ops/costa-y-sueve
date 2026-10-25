@@ -112,7 +112,7 @@ if (catalogForm) {
     $$('.property-link').forEach(link => {
       const url = new URL(link.href);
       url.search = search.toString();
-      link.href = url.pathname + url.search;
+      link.href = url.pathname + url.search + url.hash;
     });
     if (changeURL) history.replaceState(null, '', location.pathname + (search.size ? '?' + search.toString() : ''));
     const arrival = fields.get('llegada');
@@ -153,7 +153,7 @@ $$('[data-inquiry]').forEach(form => {
 const backLink = $('.property-back');
 if (backLink && query.size) backLink.href = 'alojamientos.html?' + query.toString();
 if (!catalogForm && query.size) {
-  $$('.property-link').forEach(link => { const url = new URL(link.href); url.search = query.toString(); link.href = url.pathname + url.search; });
+  $$('.property-link').forEach(link => { const url = new URL(link.href); url.search = query.toString(); link.href = url.pathname + url.search + url.hash; });
 }
 
 // Contact form opens an editable WhatsApp draft. Nothing is sent by this page.

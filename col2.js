@@ -1,10 +1,4 @@
 (() => {
- const video=document.querySelector('#col2-video');
- const start=()=>{const p=video.play();if(p)p.catch(()=>{video.focus();});};
- document.querySelector('[data-start-tour]').addEventListener('click',start);
- document.querySelector('[data-tour-link]').addEventListener('click',()=>{video.focus({preventScroll:true});});
- document.querySelectorAll('[data-seek]').forEach(button=>button.addEventListener('click',()=>{const seek=()=>{video.currentTime=Number(button.dataset.seek);start();};if(video.readyState)seek();else{video.addEventListener('loadedmetadata',seek,{once:true});video.load();}}));
- document.querySelector('[data-video-fullscreen]').addEventListener('click',()=>{if(video.webkitEnterFullscreen)video.webkitEnterFullscreen();else if(video.requestFullscreen)video.requestFullscreen().catch(()=>{});});
  const modal=document.querySelector('#col2-lightbox'), large=modal.querySelector('img'), caption=modal.querySelector('p');
  const photos=[...document.querySelectorAll('[data-photo]')];let current=0,opener;
  function show(i){current=Math.max(0,Math.min(photos.length-1,i));large.src=photos[current].src;large.alt=photos[current].alt;caption.textContent=`${current+1} / ${photos.length} · ${large.alt}`;modal.querySelector('[data-photo-prev]').disabled=current===0;modal.querySelector('[data-photo-next]').disabled=current===photos.length-1;}
