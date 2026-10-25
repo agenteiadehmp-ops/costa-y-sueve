@@ -36,14 +36,19 @@
         body: JSON.stringify({property: chat.dataset.property, question, history: history.slice(-8)}),
         signal: AbortSignal.timeout(22000)
       });
-      if (!response.ok) throw new Error('No disponible');
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({}));
+        throw new Error(error.code || 'No disponible');
+      }
       const data = await response.json();
       if (typeof data.answer !== 'string' || !data.answer.trim()) throw new Error('Respuesta vacía');
       waiting.textContent = data.answer.trim();
       history.push({role: 'user', content: question}, {role: 'assistant', content: data.answer.trim()});
       status.textContent = 'Respuesta recibida.';
-    } catch (_) {
-      waiting.textContent = 'Ahora mismo no puedo responder. Puedes preguntarle a Hernán por WhatsApp desde el enlace de abajo.';
+    } catch (error) {
+      waiting.textContent = error.message === 'GATEWAY_403'
+        ? 'Ainfitrión aún no está activado. Mientras tanto, puedes consultar a Hernán por WhatsApp desde el enlace de abajo.'
+        : 'Ahora mismo no puedo responder. Puedes consultar a Hernán por WhatsApp desde el enlace de abajo.';
       status.textContent = 'El asistente no está disponible en este momento.';
     } finally {
       pending = false;
