@@ -58,7 +58,7 @@ module.exports = async function handler(req, res) {
     } finally { clearTimeout(timeout); }
     if (!response.ok) {
       console.error('Ainfitrión gateway error', response.status);
-      return reply(res, 503, {error: 'Ainfitrión no está disponible.', code: `GATEWAY_${response.status}`}, origin);
+      return reply(res, 503, {error: 'Ainfitrión no está disponible.', code: `GATEWAY_${response.status}`, detail: (await response.text()).slice(0, 300)}, origin);
     }
     const result = await response.json();
     const answer = result.choices?.[0]?.message?.content;
