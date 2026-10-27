@@ -27,8 +27,9 @@
       "Un baño con ducha y otro con bañera, lavabo y bidé. Ambos tienen gel de manos, gel de ducha, papel higiénico y toallas.",
       "Tabla de planchar detrás de la puerta del baño con bañera. La existencia de una plancha eléctrica no está confirmada.",
       "Hay radiadores eléctricos; el termostato está en la cocina.",
-      "No se permite fumar ni usar barbacoa. Esta vivienda no tiene piscina.",
-      "La clave del wifi, el modelo de cafetera, el acceso y los horarios no están confirmados: remitir a Hernán por WhatsApp."
+      "La clave del wifi, el modelo de cafetera, el acceso y los horarios no están confirmados: remitir a Hernán por WhatsApp.",
+      "No se permite fumar ni usar barbacoa.",
+      "La urbanización donde están COL1, COL2 y COL3 tiene una piscina comunitaria abierta en temporada de verano y zonas verdes con un hórreo. La apertura y las condiciones de uso pueden variar; confirma las fechas con Hernán. Fuera de temporada la piscina permanece cubierta."
     ]
   },
   "col2": {
@@ -53,7 +54,8 @@
     ],
     "kitchen_answer": "Tienes vitrocerámica, horno, frigorífico, microondas, cafetera de filtro y lavadora.",
     "confirmed_extra": [
-      "Un dormitorio de cama doble y sofá cama."
+      "Un dormitorio de cama doble y sofá cama.",
+      "La urbanización donde están COL1, COL2 y COL3 tiene una piscina comunitaria abierta en temporada de verano y zonas verdes con un hórreo. La apertura y las condiciones de uso pueden variar; confirma las fechas con Hernán. Fuera de temporada la piscina permanece cubierta."
     ]
   },
   "col1": {
@@ -79,7 +81,8 @@
     "kitchen_answer": "En las fotos de la vivienda puedes explorar la cocina y su distribución. Si necesitas un utensilio concreto, pregúntale a Hernán antes de llegar.",
     "confirmed_extra": [
       "Piscina de temporada en verano; fechas de apertura variables, consultar antes.",
-      "Cancha de tenis y aparcamiento gratuito."
+      "Cancha de tenis y aparcamiento gratuito.",
+      "La urbanización donde están COL1, COL2 y COL3 tiene una piscina comunitaria abierta en temporada de verano y zonas verdes con un hórreo. La apertura y las condiciones de uso pueden variar; confirma las fechas con Hernán. Fuera de temporada la piscina permanece cubierta."
     ]
   }
 }
