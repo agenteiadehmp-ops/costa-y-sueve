@@ -1,0 +1,41 @@
+{
+  "id": "col3",
+  "name": "Apartamento amplio en Colunga",
+  "location": "Colunga, Asturias",
+  "guest_capacity": "La capacidad autorizada del alojamiento no está confirmada; consulta a Hernán antes de reservar.",
+  "layout": [
+    "Dos dormitorios separados: uno con cama doble y otro con dos camas individuales.",
+    "Salón comedor, cocina independiente y dos baños."
+  ],
+  "sleep_and_linen": [
+    "Las camas se preparan con protector de colchón, sábanas, fundas y manta.",
+    "Se ha observado ropa de cama de repuesto en el armario del dormitorio doble, pero no se ha cerrado el recuento de mudas.",
+    "Ambos baños tienen toallas; no está confirmado el número de juegos adicionales."
+  ],
+  "kitchen": [
+    "Cocina independiente con vitrocerámica, horno, microondas, frigorífico, lavadora, ollas, sartenes y utensilios.",
+    "El tendedero plegable está detrás del frigorífico.",
+    "El modelo de cafetera no está confirmado."
+  ],
+  "bathroom": [
+    "Un baño con ducha y otro con bañera, lavabo y bidé.",
+    "Ambos baños tienen jabón de manos, gel de ducha, papel higiénico y toallas.",
+    "La tabla de planchar está detrás de la puerta del baño con bañera; no está confirmada una plancha eléctrica."
+  ],
+  "comfort": ["Hay radiadores eléctricos y el termostato está en la cocina."],
+  "community": [
+    "La urbanización tiene piscina comunitaria abierta en temporada de verano y zonas verdes con un hórreo; fuera de temporada la piscina permanece cubierta.",
+    "Fechas, horarios y condiciones de la piscina deben confirmarse con Hernán."
+  ],
+  "nearby": [
+    "Colunga tiene bares, restaurantes y supermercados.",
+    "La Griega, Lastres, el Museo del Jurásico y los paisajes del Sueve son ideas para descubrir la zona."
+  ],
+  "stay_guidance": [
+    "Cuida la vivienda y respeta el descanso de los vecinos.",
+    "No se permite fumar ni usar barbacoa en esta vivienda.",
+    "Para condiciones sobre mascotas o visitas, pregunta a Hernán antes de reservar."
+  ],
+  "unconfirmed": ["Capacidad autorizada", "Dirección exacta, acceso y llaves", "Clave wifi", "Horarios de entrada y salida", "Precio y disponibilidad", "Fechas concretas de piscina", "Modelo de cafetera y plancha eléctrica", "Número de juegos de ropa de cama o toallas de reserva"],
+  "contact": "Para detalles no confirmados, Hernán atiende por el botón de WhatsApp que aparece debajo del chat."
+}

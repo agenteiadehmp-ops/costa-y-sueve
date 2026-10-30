@@ -1,0 +1,36 @@
+{
+  "id": "col2",
+  "name": "Apartamento para cuatro en Colunga",
+  "location": "Colunga, Asturias",
+  "guest_capacity": "Hasta cuatro personas según la ficha del alojamiento.",
+  "layout": [
+    "Un dormitorio con cama doble y un sofá cama doble en el salón.",
+    "Salón comedor con televisor y mesa para cuatro, cocina y un baño."
+  ],
+  "sleep_and_linen": [
+    "El dormitorio tiene cama doble y armario; el sofá cama del salón permite dormir a otras dos personas.",
+    "Hay dos mantas gruesas en el armario del dormitorio.",
+    "Se han anotado toallas de baño y dos toallas de pies; el número de mudas de repuesto aún se está comprobando."
+  ],
+  "kitchen": [
+    "Vitrocerámica de cuatro zonas, horno, frigorífico, microondas, cafetera de filtro y lavadora.",
+    "Se han anotado ollas, platos, vasos, tazas, cubiertos y utensilios de cocina.",
+    "Una sartén antiadherente, batidora, hervidor y tostadora no están confirmados como equipamiento disponible."
+  ],
+  "bathroom": ["Baño con bañera y mampara, lavabo, inodoro, bidé y ventana."],
+  "extras": ["Hay tendedero y tabla de planchar; la plancha está en el armario del dormitorio."],
+  "community": [
+    "La urbanización tiene piscina comunitaria abierta en temporada de verano y zonas verdes con un hórreo; fuera de temporada la piscina permanece cubierta.",
+    "Fechas, horarios y condiciones de la piscina deben confirmarse con Hernán."
+  ],
+  "nearby": [
+    "Colunga tiene bares, restaurantes y supermercados.",
+    "La Griega, Lastres, el Museo del Jurásico y los paisajes del Sueve son ideas para descubrir la zona."
+  ],
+  "stay_guidance": [
+    "Cuida la vivienda y respeta el descanso de los vecinos.",
+    "Para condiciones sobre mascotas, tabaco o visitas, pregunta a Hernán antes de reservar."
+  ],
+  "unconfirmed": ["Dirección exacta, acceso y llaves", "Clave wifi", "Horarios de entrada y salida", "Precio y disponibilidad", "Fechas concretas de piscina", "Número de juegos de ropa de cama o toallas de reserva", "Sartén antiadherente, batidora, hervidor y tostadora"],
+  "contact": "Para detalles no confirmados, Hernán atiende por el botón de WhatsApp que aparece debajo del chat."
+}

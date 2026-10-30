@@ -1,0 +1,39 @@
+{
+  "id": "col1",
+  "name": "Apartamento para tres en Colunga",
+  "location": "Colunga, Asturias",
+  "guest_capacity": "Se presenta para hasta tres personas; la capacidad autorizada del anuncio está pendiente de confirmación.",
+  "layout": [
+    "Un dormitorio principal con cama doble y una cama individual en el salón.",
+    "Salón comedor con sofá azul, televisor, mesa y cuatro sillas.",
+    "Cocina y un baño."
+  ],
+  "sleep_and_linen": [
+    "Las camas se muestran preparadas con ropa de cama; hay una manta extra en el armario del dormitorio.",
+    "Hay toallas de baño y de mano. No está confirmado el número de juegos adicionales."
+  ],
+  "kitchen": [
+    "Se han comprobado frigorífico, placa, horno, microondas y lavadora.",
+    "No están confirmados la cafetera, los utensilios concretos ni los pequeños electrodomésticos."
+  ],
+  "bathroom": [
+    "Baño con bañera y mampara, lavabo, inodoro, bidé, espejo, ventana y radiador.",
+    "Se han anotado alfombra de baño, papel higiénico, gel de ducha y jabón de manos."
+  ],
+  "extras": ["Plancha, tabla de planchar y perchas en el dormitorio."],
+  "community": [
+    "La urbanización tiene piscina comunitaria abierta en temporada de verano y zonas verdes con un hórreo; fuera de temporada la piscina permanece cubierta.",
+    "Hay acceso a una pista de tenis. Fechas, horarios y condiciones de las zonas comunes deben confirmarse con Hernán.",
+    "Se ha comunicado aparcamiento amplio y gratuito en las proximidades; no está confirmado si hay plaza asignada ni disponibilidad garantizada."
+  ],
+  "nearby": [
+    "Colunga tiene bares, restaurantes y supermercados.",
+    "La Griega, Lastres, el Museo del Jurásico y los paisajes del Sueve son ideas para descubrir la zona."
+  ],
+  "stay_guidance": [
+    "Cuida la vivienda y respeta el descanso de los vecinos.",
+    "Para condiciones sobre mascotas, tabaco o visitas, pregunta a Hernán antes de reservar."
+  ],
+  "unconfirmed": ["Dirección exacta, acceso y llaves", "Clave wifi", "Horarios de entrada y salida", "Precio y disponibilidad", "Condiciones y fechas concretas de piscina y tenis", "Cafetera y menaje concreto", "Número y ubicación de juegos de ropa de cama o toallas de reserva"],
+  "contact": "Para detalles no confirmados, Hernán atiende por el botón de WhatsApp que aparece debajo del chat."
+}
