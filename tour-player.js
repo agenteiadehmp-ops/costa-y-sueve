@@ -1,5 +1,6 @@
 (() => {
  const video=document.querySelector('[data-property-video]');if(!video)return;
+ video.muted=true;video.defaultMuted=true;
  const full=video.dataset.fullTour,choices=[...document.querySelectorAll('[data-tour]')],chapters=[...document.querySelectorAll('[data-seek]')];
  const status=document.querySelector('[data-tour-status]');let pending=null;
  let selected=full;
@@ -10,7 +11,7 @@
   try{video.currentTime=target;}catch(e){/* Retry once metadata/data becomes available. */}
  }
  function play(time,src=full){
-  status.textContent='';pending=time;
+  status.textContent='';pending=time;video.muted=true;
   if(selected!==src){selected=src;video.src=src;video.load();}
   choices.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tour===src)));
   const p=video.play();if(p)p.catch(e=>{if(e.name!=='AbortError')status.textContent='Pulsa el control de reproducción del vídeo para continuar.';});
