@@ -58,7 +58,8 @@ module.exports = async function handler(req, res) {
     } finally { clearTimeout(timeout); }
     if (!response.ok) {
       const gatewayError = await response.json().catch(() => ({}));
-      console.error('Ainfitrión gateway error', response.status, gatewayError.error?.code || gatewayError.code || 'unknown');
+      // Log only the provider's bounded error payload; never log prompts or auth tokens.
+      console.error('Ainfitrión gateway error', response.status, JSON.stringify(gatewayError).slice(0, 500));
       return reply(res, 503, {error: 'Ainfitrión no está disponible.', code: `GATEWAY_${response.status}`}, origin);
     }
     const result = await response.json();
