@@ -1,0 +1,37 @@
+{
+  "id": "ca2",
+  "name": "Casa entre el Mar y la Montaña",
+  "location": "Caravia, Asturias",
+  "guest_capacity": "Máximo 8 huéspedes.",
+  "layout": [
+    "Tres plantas de vivienda y una planta de garaje. Hay escaleras.",
+    "Cuatro dormitorios: dos con cama doble y dos con dos camas individuales. Dos baños con bañera y bidé."
+  ],
+  "sleep_and_linen": [
+    "2 camas dobles y 4 individuales, confirmado por Hernán."
+  ],
+  "kitchen": [
+    "Frigorífico, horno, microondas, cafetera y tostadora."
+  ],
+  "extras": [
+    "Wifi y calefacción. Hernán confirma que la incidencia anterior de calefacción está solucionada.",
+    "Salón-comedor con chimenea y TV. Lavadora y secadora en planta de garaje.",
+    "Aparcamiento en la calle sujeto a disponibilidad. No se puede aparcar dentro del garaje."
+  ],
+  "nearby": [
+    "Las playas del Arenal de Morís y La Espasa y los paisajes del Sueve te esperan cerca de Caravia.",
+    "Descubre también Lastres, Colunga y el Museo del Jurásico de Asturias. Pregunta a Hernán por ideas para tu estancia."
+  ],
+  "stay_guidance": [
+    "Entrada desde las 16:00 y salida hasta las 12:00. Confirma tu hora de llegada con Hernán.",
+    "No se permite fumar ni celebrar fiestas o eventos. Respeta el descanso de los vecinos; horario de silencio de 00:00 a 09:00.",
+    "Mascotas bajo petición: consulta las condiciones y posibles suplementos antes de reservar.",
+    "La vivienda tiene varias plantas comunicadas por escaleras. Tenlo en cuenta si viajas con personas con movilidad reducida."
+  ],
+  "unconfirmed": [
+    "Precios y disponibilidad: consultar con Hernán.",
+    "Suplemento y aceptación de mascotas para cada estancia.",
+    "Acceso, claves y detalles privados: contactar con Hernán."
+  ],
+  "contact": "Usa el botón de WhatsApp para hablar con Hernán."
+}
