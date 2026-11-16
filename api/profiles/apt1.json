@@ -1,0 +1,16 @@
+{
+  "id": "apt1",
+  "name": "El Apartamentín de Lastres",
+  "location": "Lastres, Asturias",
+  "guest_capacity": "Hasta 4 huéspedes según el anuncio vigente; confirmar al consultar fechas.",
+  "layout": [
+    "Apartamento de aproximadamente 50 m² en una segunda planta, con un dormitorio, salón-cocina y un baño con ducha.",
+    "Un dormitorio con cama doble y sofá cama en el salón, según el anuncio vigente."
+  ],
+  "kitchen": ["Zona de cocina con frigorífico y cafetera; comedor en el salón."],
+  "extras": ["Televisión, wifi de fibra óptica y lavadora anunciados.", "Aparcamiento en la calle sujeto a disponibilidad; no prometer plaza privada."],
+  "nearby": ["Desde Lastres se puede explorar la playa de La Griega, el Museo del Jurásico, Colunga y los paisajes del Sueve."],
+  "stay_guidance": ["No se permiten fiestas según el anuncio de Booking. Consulta con Hernán los horarios, mascotas y el resto de condiciones antes de reservar."],
+  "unconfirmed": ["Precios y disponibilidad: confirmar con Hernán.", "No hay fotografías propias de la vivienda ni vídeo integrados todavía; las imágenes de la página muestran Lastres, no el apartamento.", "Acceso, claves y datos privados: Hernán los facilita al huésped confirmado."],
+  "contact": "Usa el botón de WhatsApp de la ficha para hablar con Hernán."
+}

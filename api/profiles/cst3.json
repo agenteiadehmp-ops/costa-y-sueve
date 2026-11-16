@@ -1,0 +1,20 @@
+{
+  "id": "cst3",
+  "name": "Chalet en Castiello",
+  "location": "Castiello, Colunga, Asturias",
+  "guest_capacity": "Hasta 8 huéspedes, según el anuncio vigente; confirmar la ocupación al consultar fechas.",
+  "layout": [
+    "Casa de dos plantas con cuatro dormitorios y dos baños, según el anuncio vigente.",
+    "En la planta de día hay cocina, comedor, salón, un aseo y zona de lavado. Los dormitorios están arriba y se accede por escalera.",
+    "Tiene porche, zona de césped y aparcamiento dentro de la propiedad."
+  ],
+  "sleep_and_linen": [
+    "El anuncio describe dos dormitorios con cama matrimonial, otro individual con escritorio y un cuarto con litera; la distribución exacta de todas las camas debe confirmarse con Hernán."
+  ],
+  "kitchen": ["Cocina equipada y comedor conectado al salón. El anuncio destaca una cafetera de goteo."],
+  "extras": ["Wifi, televisión y zona de trabajo anunciados."],
+  "nearby": ["Castiello es una aldea tranquila en el concejo de Colunga, con costa y Sueve como planes de la zona."],
+  "stay_guidance": ["Consulta las normas, el uso del exterior y el aparcamiento para tus fechas con Hernán."],
+  "unconfirmed": ["Precios, disponibilidad, horarios, admisión de mascotas y condiciones finales: confirmar con Hernán.", "No hay fotografías propias de la vivienda ni vídeo integrados todavía; las imágenes de la página muestran el entorno, no el chalet.", "Acceso, claves y datos privados: Hernán los facilita al huésped confirmado."],
+  "contact": "Usa el botón de WhatsApp de la ficha para hablar con Hernán."
+}
