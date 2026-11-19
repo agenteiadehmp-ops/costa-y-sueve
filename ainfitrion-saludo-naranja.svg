@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title">
+<title id="title">Ainfitrión saluda con un ala</title>
+<style>
+.wave{transform-origin:197px 177px;animation:saludo 2.7s ease-in-out both}
+@keyframes saludo{0%,75%,100%{transform:rotate(0)}14%,43%{transform:rotate(-18deg)}29%,57%{transform:rotate(9deg)}}
+@media(prefers-reduced-motion:reduce){.wave{animation:none}}
+</style>
+<g stroke="#06384c" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+<path fill="#ffbd20" d="M120 246l-2 28c0 6-23 11-26 17-2 4 8 3 15 6l12 5 11-6 16-3c3-3-12-13-13-19l3-26m26 1l2 26c0 6-12 14-11 18l17 1 13 7 12-6 13-3c3-5-21-11-24-18l-4-27"/>
+<g class="wave"><path fill="#9299a9" d="M186 173q22-9 39-42 11-22 19-15 5 5-1 21 20-31 29-23 8 6-8 28 22-19 28-10 5 9-19 28 20-10 23-1 4 12-26 28-28 24-68 20z"/><path fill="#292c35" stroke="none" d="M274 143q13-14 17-10 6 8-19 27 22-10 23-1 1 9-24 23l-14 6q13-10 6-14 11-17 11-31z"/><path fill="#fff" stroke="none" d="M283 138q7-7 8-3 1 5-10 11zm4 21q7-4 7 0 1 5-10 9z"/></g>
+<path fill="#fffdfa" d="M112 148q-27 23-26 66l-24 27q9 7 26 1-5 11 5 11l21-9q19 23 49 16 33-6 39-48 5-35-14-67z"/>
+<path fill="#9299a9" d="M108 160q-30 14-43 52l-13 25q-3 9 8 8 40-4 62-38 13-29-14-47z"/><path fill="#292c35" stroke="none" d="M62 225q8 3 21-2l-10 15-17 5zm16 11 15-13 7-1q-10 11-22 14z"/><path fill="#fff" stroke="none" d="M63 232l7-1q-6 8-12 7zm17-2 8-5q-6 9-11 10z"/>
+<path fill="#fffdfa" d="M106 147q-13-9-17-25-10 5-10-2l6-13q-4-28 11-51 17-26 49-27 37-2 52 30 9 17 7 37 15 13 8 26l-24 14 4 22-67 12z"/>
+<path fill="#06384c" stroke="none" d="M102 81q11-18 28-7-16-1-28 7zm60-7q13-15 24 0-12-7-24 0z"/>
+<ellipse cx="123" cy="99" rx="13" ry="17" fill="#fff"/><ellipse cx="178" cy="96" rx="11" ry="15" fill="#fff"/>
+<ellipse cx="127" cy="101" rx="7" ry="11" fill="#06384c" stroke="none"/><ellipse cx="181" cy="98" rx="6" ry="10" fill="#06384c" stroke="none"/><circle cx="129" cy="97" r="3" fill="#fff" stroke="none"/><circle cx="183" cy="94" r="3" fill="#fff" stroke="none"/>
+<path fill="#ffbd20" d="M126 117q17-3 28-15 9-9 21-7 27 4 40 21 7 9 5 17-8-9-17-9-15 16-36 13-23-3-41-20z"/><path fill="#db252a" stroke="none" d="M203 124q3-10 10-5 5 5 5 11-7-6-15-6z"/><path fill="none" d="M126 117q24 17 52 10 15-4 25-3"/>
+<path fill="#E97028" d="M107 153q-21-20-42-10 7 17 31 20-25 6-30 24 28 1 47-20 22 24 52 42 27-26 34-51-1-10-8-10-28 19-69 10z"/><circle cx="108" cy="162" r="10" fill="#F58336"/><path fill="#fffdfa" stroke="none" d="M130 176q12 8 26-3 17-14 28 0-13-5-10 4 3 6 13 1-17 14-23 1-22 12-34-3z"/>
+</g></svg>

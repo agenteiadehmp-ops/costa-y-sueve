@@ -1,20 +1,16 @@
 (() => {
   const chat = document.querySelector('#ainfitrion[data-property]');
   if (!chat) return;
-  // The welcome lives in the shared chat, so new property pages inherit it.
-  const welcome = document.createElement('div');
-  welcome.className = 'ainfitrion-welcome';
-  welcome.setAttribute('aria-hidden', 'true');
-  welcome.innerHTML = '<span class="ainfitrion-avatar"><span class="ainfitrion-eyes"></span><span class="ainfitrion-smile"></span><span class="ainfitrion-wave">👋</span></span><span class="ainfitrion-hello">¡Hola!</span>';
-  chat.querySelector('.eyebrow')?.after(welcome);
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+  // Start the mascot greeting when the guest reaches the assistant.
+  const mascot = chat.querySelector('.ainfitrion-mascot');
+  if (mascot && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
-        welcome.classList.add('is-greeting');
+        mascot.src = 'ainfitrion-saludo-naranja.svg?saludo=1';
         observer.disconnect();
       }
     }, {threshold: 0.3});
-    observer.observe(welcome);
+    observer.observe(mascot);
   }
   const messages = chat.querySelector('[data-ainfitrion-messages]');
   const form = chat.querySelector('[data-ainfitrion-form]');
