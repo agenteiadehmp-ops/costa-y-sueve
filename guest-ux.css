@@ -21,3 +21,10 @@
 
 /* A short greeting gives Ainfitrión a friendly presence on every home. */
 .ainfitrion-welcome{display:flex;align-items:center;gap:12px;margin:2px 0 0;color:#374944;font-size:14px;font-weight:700}.ainfitrion-avatar{position:relative;display:block;width:62px;height:62px;border-radius:50%;background:#e5eee9;border:2px solid #b5cbc0;box-shadow:0 8px 22px #2d55491b}.ainfitrion-eyes:before,.ainfitrion-eyes:after{content:"";position:absolute;top:23px;width:5px;height:5px;border-radius:50%;background:#334b43}.ainfitrion-eyes:before{left:19px}.ainfitrion-eyes:after{right:19px}.ainfitrion-smile{position:absolute;left:24px;top:32px;width:12px;height:7px;border:2px solid #334b43;border-top:0;border-radius:0 0 15px 15px}.ainfitrion-wave{position:absolute;right:-17px;top:-12px;font-size:26px;line-height:1;transform-origin:20% 80%}.ainfitrion-hello{border:1px solid #d9e5db;border-radius:18px 18px 18px 5px;background:#fff;padding:8px 13px;box-shadow:0 5px 15px #2d554410}.ainfitrion-welcome.is-greeting .ainfitrion-wave{animation:ainfitrion-hello-wave .75s ease-in-out 2}.ainfitrion-welcome.is-greeting .ainfitrion-hello{animation:ainfitrion-hello-pop .55s ease-out both}@keyframes ainfitrion-hello-wave{0%,100%{transform:rotate(0)}25%{transform:rotate(22deg)}65%{transform:rotate(-12deg)}}@keyframes ainfitrion-hello-pop{from{opacity:0;transform:translateY(7px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}@media(prefers-reduced-motion:reduce){.ainfitrion-welcome *{animation:none!important}}
+
+/* Keep the mascot, introduction and chat on the same central axis. */
+.guest-host.ainfitrion .ainfitrion-intro{width:100%;max-width:680px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin-inline:auto;gap:1rem}
+.guest-host.ainfitrion .ainfitrion-mascot{display:block;margin-inline:auto}
+.guest-host.ainfitrion .ainfitrion-intro>div{width:100%;min-width:0}
+.guest-host.ainfitrion .ainfitrion-intro h2,.guest-host.ainfitrion .ainfitrion-intro p{margin-inline:auto}
+.guest-host.ainfitrion .ainfitrion-chat,.guest-host.ainfitrion .ainfitrion-human{margin-inline:auto}
