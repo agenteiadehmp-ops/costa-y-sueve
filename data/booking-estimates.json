@@ -1,0 +1,19 @@
+{
+  "updatedAt":"2026-11-25",
+  "validFrom":"2026-11-25",
+  "validUntil":"2027-01-01",
+  "properties":{
+    "lu1":{"ordinaryCents":10800,"specialCents":17100,"referenceGuests":4,"checkIn":"Consultar horario de entrada","checkOut":"Consultar horario de salida","pets":"Mascotas bajo consulta"},
+    "lu2":{"ordinaryCents":13500,"specialCents":20700,"referenceGuests":6,"checkIn":"Desde las 16:00","checkOut":"Antes de las 11:00","pets":"Mascotas bajo consulta; suplemento por confirmar"},
+    "col1":{"ordinaryCents":8910,"specialCents":10890,"referenceGuests":3,"checkIn":"Consultar horario de entrada","checkOut":"Consultar horario de salida","pets":"Consultar admisión de mascotas"},
+    "col2":{"ordinaryCents":8910,"specialCents":10890,"referenceGuests":4,"checkIn":"Consultar horario de entrada","checkOut":"Consultar horario de salida","pets":"Consultar admisión de mascotas"},
+    "col3":{"ordinaryCents":10800,"specialCents":17100,"referenceGuests":null,"checkIn":"Consultar horario de entrada","checkOut":"Consultar horario de salida","pets":"Consultar admisión de mascotas","rules":"No se permite fumar ni usar barbacoa. Capacidad del grupo por confirmar."},
+    "apt1":{"ordinaryCents":8910,"specialCents":10890,"referenceGuests":4,"checkIn":"Consultar horario de entrada","checkOut":"Consultar horario de salida","pets":"Consultar admisión de mascotas","rules":"No se permiten fiestas."},
+    "ca2":{"ordinaryCents":27360,"specialCents":27360,"referenceGuests":8,"checkIn":"Desde las 16:00","checkOut":"Hasta las 12:00","pets":"Mascotas bajo petición; aceptación y suplemento por confirmar","rules":"No se permite fumar ni celebrar fiestas o eventos. Silencio de 00:00 a 09:00."},
+    "cst3":{"ordinaryCents":27360,"specialCents":27360,"referenceGuests":8,"preparationCents":14000,"checkIn":"Desde las 17:00, sujeto a las condiciones de tu reserva","checkOut":"Hasta las 11:00, sujeto a las condiciones de tu reserva","pets":"Consultar admisión de mascotas"}
+  },
+  "blocks":{
+    "cst3":[{"start":"2026-12-05","end":"2026-12-08"},{"start":"2026-12-11","end":"2026-12-13"},{"start":"2026-12-23","end":"2026-12-27"},{"start":"2026-12-28","end":"2027-01-03"},{"start":"2027-02-18","end":"2027-02-21"}],
+    "ca2":[{"start":"2026-12-24","end":"2026-12-27"},{"start":"2026-12-31","end":"2027-01-03"},{"start":"2027-02-06","end":"2027-02-09"}]
+  }
+}

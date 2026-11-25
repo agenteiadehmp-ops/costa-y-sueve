@@ -1,5 +1,6 @@
 // Server-only calendar sources. Never return private feed URLs or guest details.
 const properties = require('./property-knowledge');
+const manual = require('../data/booking-estimates.json');
 const allowedHosts = ['airbnb.com','airbnb.es','booking.com','vrbo.com','homeaway.com'];
 function date(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || new Date(value+'T00:00:00Z').toISOString().slice(0,10)!==value) throw new Error('Invalid date');
@@ -47,12 +48,12 @@ async function handler(req,res) {
     const config=JSON.parse(process.env.CALENDAR_SOURCES_JSON||'{}');
     const sources=config[house]||[];
     if(!Array.isArray(sources)||sources.length>6)throw new Error('Invalid configuration');
-    if(!sources.length)return res.status(200).json({house,status:'unconnected',blocks:[],checkedAt:null});
+    if(!sources.length)return res.status(200).json({house,status:'unconnected',blocks:manual.blocks[house]||[],checkedAt:null,manualUpdatedAt:manual.updatedAt});
     const results=await Promise.allSettled(sources.map(readFeed));
-    const blocks=results.filter(r=>r.status==='fulfilled').flatMap(r=>r.value);
+    const blocks=(manual.blocks[house]||[]).concat(results.filter(r=>r.status==='fulfilled').flatMap(r=>r.value));
     const unique=[...new Map(blocks.map(b=>[b.start+'/'+b.end,b])).values()];
     return res.status(200).json({house,status:results.every(r=>r.status==='fulfilled')?'synced':'incomplete',blocks:unique,checkedAt:new Date().toISOString()});
-  }catch{return res.status(503).json({house,status:'error',blocks:[],checkedAt:null});}
+  }catch{return res.status(503).json({house,status:'error',blocks:manual.blocks[house]||[],checkedAt:null});}
 }
 module.exports=handler;
 module.exports.parseICS=parseICS;
