@@ -11,3 +11,5 @@ Recorrido completo recibido y preparado; ya no queda pendiente esa entrega.
 Revisión: nombre corregido a Luces; portada exterior renovada; jardín destacado y vínculo a la otra casa.
 
 Ajuste: jardín destacado en primera imagen de minificha del catálogo; carrusel con jardín, salón y dormitorio sin duplicados. Retirado botón de jardín de la cabecera.
+
+Minificha ampliada a 11 fotos únicas como recorrido rápido, desde jardín y exterior hasta cocina, salón, dormitorios y baños.

@@ -10,3 +10,5 @@ Recorridos incorporados: IMG_3203.mp4 (planta baja y exterior) e IMG_3237.mp4 (p
 Revisión: nombre corregido a Luces; portada exterior renovada; jardín destacado y vínculo a la otra casa.
 
 Ajuste: jardín destacado en primera imagen de minificha del catálogo; carrusel con jardín, salón y dormitorio sin duplicados. Retirado botón de jardín de la cabecera.
+
+Minificha ampliada a 10 fotos únicas como recorrido rápido, desde jardín y exterior hasta cocina, salón, dormitorios y baños y balcón.
