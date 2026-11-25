@@ -1,0 +1,11 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const {parseICS,sourceURL}=require('../api/availability');
+const wrap=e=>'BEGIN:VCALENDAR\r\n'+e+'\r\nEND:VCALENDAR';
+const stay='BEGIN:VEVENT\r\nDTSTART;VALUE=DATE:20261203\r\nDTEND;VALUE=DATE:20261206\r\nSUMMARY:Private guest\r\nEND:VEVENT';
+test('imports occupied nights with exclusive checkout and no personal details',()=>assert.deepEqual(parseICS(wrap(stay)),[{start:'2026-12-03',end:'2026-12-06'}]));
+test('rejects unsupported recurrence rather than showing false availability',()=>assert.throws(()=>parseICS(wrap(stay.replace('SUMMARY:','RRULE:FREQ=DAILY\r\nSUMMARY:')))));
+test('rejects invalid dates and time-based events',()=>{assert.throws(()=>parseICS(wrap(stay.replace('20261203','20260230'))));assert.throws(()=>parseICS(wrap(stay.replace('20261203','20261203T120000Z'))));});
+test('cancellations and empty feeds',()=>{assert.deepEqual(parseICS(wrap(stay.replace('SUMMARY:','STATUS:CANCELLED\r\nSUMMARY:'))),[]);assert.deepEqual(parseICS(wrap('')),[]);});
+test('private network and spoofed feeds rejected',()=>{for(const url of ['http://airbnb.com/a','https://localhost/a','https://airbnb.com.evil.com/a','https://127.0.0.1/a','https://user:secret@airbnb.com/a'])assert.throws(()=>sourceURL(url));assert.equal(sourceURL('https://www.airbnb.es/calendar/ical/example.ics').hostname,'www.airbnb.es');});
+test('unconnected property and failures never claim availability',async()=>{const handler=require('../api/availability');let body;const res={setHeader(){},status(code){this.code=code;return this},json(data){body=data}};await handler({method:'GET',query:{house:'lu1'}},res);assert.equal(body.status,'unconnected');assert.deepEqual(body.blocks,[]);await handler({method:'GET',query:{house:'fake'}},res);assert.equal(res.code,404);});

@@ -3,6 +3,10 @@
 (() => {
   const calendar = document.querySelector('[data-house-calendar]');
   if (!calendar) return;
+  const propertyId = ({'lu1-luces.html':'lu1','lu2-luces.html':'lu2','col1-colunga.html':'col1','col2-colunga.html':'col2','col3-colunga.html':'col3','casa-entre-el-mar-y-la-montana.html':'ca2','cst3-colunga.html':'cst3','apt1-lastres.html':'apt1'})[location.pathname.split('/').pop()];
+  let blocks = [];
+  const intersects = (start,end) => blocks.some(b => key(start)<b.end && key(end)>b.start);
+  const occupied = d => blocks.some(b => key(d)>=b.start && key(d)<b.end);
   const monthLabel = calendar.querySelector('[data-calendar-month]');
   const grid = calendar.querySelector('[data-calendar-grid]');
   const summary = calendar.querySelector('[data-calendar-summary]');
@@ -47,6 +51,9 @@
       const cell=document.createElement('button');cell.type='button';cell.className='hc-day';cell.textContent=String(day);
       cell.setAttribute('aria-label',format(date)+(date<today&&!ownerMode?', pasado':''));
       if(date<today&&!ownerMode) cell.disabled=true;
+      const choosingDeparture = arrival && !departure && date>arrival;
+      const blocked = choosingDeparture ? intersects(arrival,date) : occupied(date);
+      if(blocked) {cell.disabled=true;cell.classList.add('hc-blocked');cell.setAttribute('aria-label',format(date)+', no disponible');}
       if(arrival && key(date)===key(arrival)) cell.classList.add('hc-start');
       if(departure && key(date)===key(departure)) cell.classList.add('hc-end');
       if(arrival && departure && date>arrival && date<departure) cell.classList.add('hc-between');
@@ -66,4 +73,15 @@
   if(houseSelect) houseSelect.addEventListener('change',()=>{arrival=null;departure=null;updateSummary();render();});
   if(guests) guests.addEventListener('change',updateSummary);
   updateSummary();render();
+  if(propertyId) {
+    const tag=calendar.querySelector('.hc-tag');
+    if(tag)tag.textContent='Comprobando calendario';
+    fetch('/api/availability?house='+encodeURIComponent(propertyId),{cache:'no-store'})
+      .then(r=>r.json()).then(data=>{
+        blocks=Array.isArray(data.blocks)?data.blocks:[];
+        if(arrival && (occupied(arrival)||(departure&&intersects(arrival,departure)))){arrival=null;departure=null;}
+        if(tag)tag.textContent=data.status==='synced'?'Fechas sujetas a confirmación':'Disponibilidad por confirmar';
+        render();updateSummary();
+      }).catch(()=>{if(tag)tag.textContent='Disponibilidad por confirmar';});
+  }
 })();
