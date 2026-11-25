@@ -2,8 +2,8 @@
 
 Actualizado: 25/11/2026.
 
-Fuente: https://www.airbnb.es/rooms/1510885074291266766 y diez fotos de Hernán.
-Ubicación: Luces, cerca de Lastres. Ficha: lu2-luces.html.
-Capacidad: 6 personas; dos dormitorios, dos baños privados y aseo.
-
-Pendiente: recibir e incorporar fotos del jardín y vídeo del recorrido. Confirmar condiciones de mascotas y distribución según ocupación. Precio y disponibilidad siempre mediante consulta.
+Ficha: lu2-luces.html. Luces, cerca de Lastres.
+Incorporadas 14 fotos de Hernán: diez interiores y cuatro exteriores con jardín, porche y barbacoa.
+Vídeo incorporado: IMG_3265.mp4, recorrido de dormitorios y baños, optimizado para web sin audio.
+Excluido IMG_4169.mp4 (el largo): Hernán confirma que no corresponde a esta vivienda.
+Pendiente: Hernán enviará el otro recorrido del primer piso. No marcar la visita como completa.
