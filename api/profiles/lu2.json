@@ -1,6 +1,6 @@
 {
   "id": "lu2",
-  "name": "La Casita de Lastres 2",
+  "name": "Las Casitas de Luces 2",
   "location": "Luces, cerca de Lastres, Asturias",
   "guest_capacity": "Hasta 6 huéspedes.",
   "layout": [
@@ -8,11 +8,13 @@
     "En la planta baja se unen cocina, comedor y salón, con paredes de piedra y televisión. Cocina con frigorífico, microondas, lavavajillas y lavadora. Wifi y aire acondicionado.",
     "Dos baños completos con ducha, uno privado para cada dormitorio, y un aseo en la planta baja. La lavadora está en la cocina.",
     "La casa está en Luces, a unos 2 km de Lastres. Cuenta con jardín, barbacoa y mobiliario exterior, además de aparcamiento frente a la casa. Puedes explorar el entorno del faro de Luces y la costa de Lastres.",
-    "Entrada desde las 16:00 y salida antes de las 11:00, según el anuncio de Airbnb. Se admiten mascotas: consulta las condiciones con Hernán. La vivienda tiene dos plantas comunicadas por escaleras. Confirma disponibilidad, precio y detalles de tu estancia antes de reservar."
+    "Entrada desde las 16:00 y salida antes de las 11:00. Se admiten mascotas: consulta las condiciones con Hernán. La vivienda tiene dos plantas comunicadas por escaleras. Confirma disponibilidad, precio y detalles de tu estancia antes de reservar."
   ],
   "unconfirmed": [
     "Precio y disponibilidad: consultar con Hernán.",
     "Condiciones y suplementos de mascotas: consultar."
   ],
-  "contact": "Contacta con Hernán por WhatsApp."
+  "contact": "Contacta con Hernán por WhatsApp.",
+  "garden": "El jardín conecta la casa con un porche cubierto de piedra y madera. Cuenta con una zona de descanso con sofá y sillones, mesa baja y barbacoa de obra con fregadero: espacio para disfrutar al aire libre y también a la sombra.",
+  "related_property": "Las Casitas de Luces 1: casa contigua e independiente. Disponibilidad conjunta a consultar."
 }

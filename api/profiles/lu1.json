@@ -1,6 +1,6 @@
 {
   "id": "lu1",
-  "name": "La Casita de Lastres 1",
+  "name": "Las Casitas de Luces 1",
   "location": "Luces, cerca de Lastres, Asturias",
   "guest_capacity": "4 huéspedes",
   "layout": [
@@ -13,5 +13,7 @@
   "unconfirmed": [
     "Horarios, precio, disponibilidad y condiciones de mascotas: consultar con Hernán."
   ],
-  "contact": "Contacta con Hernán por WhatsApp."
+  "contact": "Contacta con Hernán por WhatsApp.",
+  "garden": "Desayuna al aire libre, lee al sol o comparte la sobremesa junto a la casa. El jardín tiene césped artificial y una zona de mesa y sillas, con barbacoa portátil. El dormitorio principal añade un balcón cubierto con vistas al Sueve.",
+  "related_property": "Las Casitas de Luces 2: casa contigua e independiente. Disponibilidad conjunta a consultar."
 }
