@@ -46,3 +46,6 @@ Definir por vivienda y temporada con evidencia y coste de rotación. No aplicar 
 
 ## Estado de implantación
 Regla documentada y función de cálculo comprobada. No hay muestra suficiente de cotizaciones fechadas para publicar precios definitivos de ninguna de las ocho viviendas. No se han inventado tarifas ni cargado importes ilustrativos en el calendario público. Pendiente: completar 3–5 cotizaciones comparables por ventana, confirmar ocupaciones y mínimos del propietario, calcular y activar reglas 2027.
+
+## Ampliación autorizada el 25/11/2026
+Hernán solicita aplicar el mismo estándar a lo que queda de noviembre y a diciembre de 2026. Vigente desde 25/11/2026, incluyendo solicitudes para esa noche; no alterar reservas ya confirmadas. La fecha de salida puede llegar al 01/01/2028 para cubrir la última noche de 2027. La ampliación no equivale a precios publicados: faltan cotizaciones homogéneas y configuración de tarifas reales. Ver `COMPARATIVA_NOV_DIC_2026.md`.
