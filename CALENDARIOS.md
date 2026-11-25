@@ -25,3 +25,6 @@ Los calendarios de fechas completas usan salida exclusiva: una salida el día 6 
 El panel incorpora precios por noche y mínimos por temporada para las ocho viviendas. Configuración privada `CALENDAR_RATES_JSON`, con las mismas claves de vivienda. Cada regla contiene `start` (incluido), `end` (excluido), `nightlyCents` (entero en céntimos de euro) y `minNights` (entero). No se permiten temporadas solapadas ni importes cero. No hay tarifas cargadas; no se extrapolan acuerdos de comisión ni precios de limpieza a precios del alojamiento.
 
 Esta fase muestra las reglas configuradas en el panel. Sigue pendiente el editor privado persistente, cálculo de presupuestos con suplementos e impuestos definidos y aplicación de mínimos en solicitudes de las fichas. No publica precios o restricciones en los portales.
+
+## Estándar comercial 2027
+Ver `POLITICA_PRECIOS_2027.md`: comparativa de mercado por zona y fechas, mediana menos 10 % de lanzamiento. Función validada en `api/pricing-policy.js`. Los importes ilustrativos de investigación no se cargan como tarifas verificadas.
