@@ -8,3 +8,5 @@ Incorporadas 19 fotos: fachada, jardín, cocina, salón, escalera, ambos dormito
 Recorridos incorporados: IMG_3203.mp4 (planta baja y exterior) e IMG_3237.mp4 (planta superior). Versiones web H.264 sin audio, con reproducción manual y selección de planta. Texto público propio, sin atribución a Airbnb. No reutilizar vídeos de otras viviendas ni el IMG_4169.mp4 excluido.
 
 Revisión: nombre corregido a Luces; portada exterior renovada; jardín destacado y vínculo a la otra casa.
+
+Ajuste: jardín destacado en primera imagen de minificha del catálogo; carrusel con jardín, salón y dormitorio sin duplicados. Retirado botón de jardín de la cabecera.
