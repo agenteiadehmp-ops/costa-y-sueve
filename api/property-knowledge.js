@@ -4,6 +4,7 @@ module.exports = Object.freeze({
   col1: require('./profiles/col1.json'),
   col2: require('./profiles/col2.json'),
   col3: require('./profiles/col3.json'),
+  lu1: require('./profiles/lu1.json'),
   lu2: require('./profiles/lu2.json'),
   ca2: require('./profiles/ca2.json'),
   cst3: require('./profiles/cst3.json'),
